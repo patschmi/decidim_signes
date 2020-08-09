@@ -17,6 +17,10 @@ puts "create user"
 user = Decidim::System::Admin.new(email: "nicolas@gmail.com", password: "nounours", password_confirmation: "nounours")
 user.save!
 
+puts "create user1"
+
+user1 = Decidim::User::Admin.new(email: "patschmi78@gmail.com", password: "Tchadtcha4", password_confirmation: "Tchadtcha4")
+user1.save!
 # Decidim::Organization.first || Decidim::Organization.create!(
 #   name: Faker::Company.name,
 #   twitter_handler: Faker::Hipster.word,
