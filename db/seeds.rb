@@ -19,7 +19,7 @@ user.save!
 
 puts "create user1"
 
-user1 = Decidim::User::Admin.new(email: "patschmi78@gmail.com", password: "Tchadtcha4", password_confirmation: "Tchadtcha4")
+user1 = Decidim::User.new(email: "patschmi78@gmail.com", password: "Tchadtcha4", password_confirmation: "Tchadtcha4")
 user1.save!
 # Decidim::Organization.first || Decidim::Organization.create!(
 #   name: Faker::Company.name,
