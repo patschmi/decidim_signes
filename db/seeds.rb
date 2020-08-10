@@ -17,22 +17,18 @@ puts "...create user..."
 user = Decidim::System::Admin.new(email: "nicolas@gmail.com", password: "nounours", password_confirmation: "nounours")
 user.save!
 
-Decidim::Organization.first || Decidim::Organization.create!(
-  name: "Agora en ligne",
-  host: "decidimsignes.herokuapp.com",
-  default_locale: Decidim.default_locale,
-  available_locales: Decidim.available_locales,
-  reference_prefix: "MM",
-  available_authorizations: Decidim.authorization_workflows.map(&:name),
-  users_registration_mode: :enabled,
-  tos_version: Time.current,
-  badges_enabled: true,
-  user_groups_enabled: true,
-  send_welcome_notification: true
-)
+# Decidim::Organization.first || Decidim::Organization.create!(
+#   name: "Agora en ligne",
+#   host: "decidimsignes.herokuapp.com",
+#   default_locale: Decidim.default_locale,
+#   available_locales: Decidim.available_locales,
+#   reference_prefix: "MM",
+#   available_authorizations: Decidim.authorization_workflows.map(&:name),
+#   users_registration_mode: :enabled,
+#   tos_version: Time.current,
+#   badges_enabled: true,
+#   user_groups_enabled: true,
+#   send_welcome_notification: true
+# )
 
-puts "...create organization user..."
-user1 = Decidim::User.new(email: "patschmi78@gmail.com", password: "Tchadtcha4", password_confirmation: "Tchadtcha4")
-user1.save!
-
-Decidim.seed!
+# Decidim.seed!
