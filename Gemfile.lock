@@ -119,6 +119,7 @@ GEM
     crass (1.0.5)
     css_parser (1.7.1)
       addressable
+    daemons (1.3.1)
     dalli (2.7.10)
     date_validator (0.9.0)
       activemodel
@@ -322,6 +323,11 @@ GEM
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
+    delayed_job (4.1.8)
+      activesupport (>= 3.0, < 6.1)
+    delayed_job_active_record (4.1.4)
+      activerecord (>= 3.0, < 6.1)
+      delayed_job (>= 3.0, < 5)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.7.2)
@@ -784,9 +790,11 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (~> 1.3)
   byebug (~> 11.0)
+  daemons
   dalli
   decidim (= 0.21.0)
   decidim-dev (= 0.21.0)
+  delayed_job_active_record
   faker (~> 1.9)
   figaro
   fog-aws

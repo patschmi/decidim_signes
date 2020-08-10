@@ -32,6 +32,8 @@ end
 
 group :production do
   gem 'passenger'
+  gem 'delayed_job_active_record'
+  gem "daemons"
   gem 'fog-aws'
   gem 'dalli'
   gem 'sendgrid-ruby'
